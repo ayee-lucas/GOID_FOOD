@@ -1,0 +1,23 @@
+@import "../colors";
+@import "../fonts";
+@import "../mixings";
+
+.about_section {
+  .row {
+    @include align-center;
+  }
+  .detail-box {
+    padding-left: 10%;
+    p {
+      margin-top: 20px;
+    }
+    a {
+      @include btn-dark-alt
+    }
+  }
+  .img-box {
+    img {
+      width: 100%;
+    }
+  }
+}

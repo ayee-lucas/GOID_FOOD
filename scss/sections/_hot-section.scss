@@ -1,0 +1,102 @@
+
+@import "../colors";
+@import "../fonts";
+@import "../mixings";
+
+.hot_section {
+  .carousel_container {
+    border: 1px solid #c2c2c2;
+    padding: 45px 0 15px 0;
+    margin-top: 30px;
+    border-left: none;
+    border-right: none;
+  }
+  .heading_container {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  .box {
+    text-align: center;
+    .img-box {
+      @include display-flex;
+      @include justify-center;
+      @include align-center;
+      height: 135px;
+      img {
+        width: 75%;
+      }
+    }
+    .detail-box {
+      margin-top: 35px;
+      p {
+        margin-top: 10px;
+      }
+      a {
+
+        @include btn-dark-alt;
+        padding: 7px 20px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .carousel-wrap {
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+  }
+  .owl-nav {
+    > div {
+      margin-top: -26px;
+      position: absolute;
+      top: 50%;
+      color: $light-color;
+    }
+  }
+  .owl-carousel {
+    .owl-nav {
+      .owl-prev {
+        width: 50px;
+        height: 50px;
+        background-color: $secondary-color;
+        background-size: 9px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        outline: none;
+        background-image: url(../images/left-angle.png);
+        left: -10%;
+        &:hover {
+          background-color: $dark-color;
+        }
+      }
+      .owl-next {
+        width: 50px;
+        height: 50px;
+        background-color: $secondary-color;
+        background-size: 9px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        outline: none;
+        right: -10%;
+        background-image: url(../images/right-angle.png);
+        &:hover {
+          background-color: $dark-color;
+        }
+      }
+    }
+    .owl-dots.disabled {
+      display: block;
+    }
+    .owl-nav.disabled {
+      display: block;
+    }
+  }
+}

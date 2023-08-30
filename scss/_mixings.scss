@@ -1,0 +1,122 @@
+@mixin display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@mixin flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin flex-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@mixin justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin bg-gradient {
+  content: "";
+  position: absolute;
+
+  width: 18%;
+  min-width: 150px;
+  height: 100%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($secondary-color),
+    to($second-gradient-color)
+  );
+  background: linear-gradient(
+    to right,
+    $secondary-color,
+    $second-gradient-color
+  );
+}
+
+@mixin blue-line {
+  margin: 0 10px;
+  border: none;
+  @include flex;
+  max-width: 200px;
+  height: 3px;
+  background-color: $secondary-color;
+}
+
+@mixin btn-send {
+  background-color: transparent;
+  border: 2px solid #51b5ef;
+  color: $secondary-color;
+  text-transform: uppercase;
+  padding: 6px 40px;
+  border-radius: 25px;
+  margin-top: 45px;
+}
+
+@mixin btn-dark {
+  display: inline-block;
+  padding: 10px 0px;
+  background-color: $dark-color;
+  color: $primary-color;
+  border: 1px solid #262626;
+  text-transform: uppercase;
+  &:hover {
+    background-color: transparent;
+    color: $dark-color;
+  }
+}
+
+@mixin btn-blue {
+  display: inline-block;
+  padding: 10px 0px;
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: 1px solid #51b5ef;
+  text-transform: uppercase;
+  margin-right: 10px;
+  &:hover {
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}
+
+@mixin btn-dark-alt {
+  display: inline-block;
+  padding: 8px 35px;
+  background-color: $dark-color;
+  color: $primary-color;
+  border: 1px solid #262626;
+  margin-top: 30px;
+  &:hover {
+    background-color: transparent;
+    color: $dark-color;
+  }
+}

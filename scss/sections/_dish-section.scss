@@ -1,0 +1,39 @@
+@import "../colors";
+@import "../fonts";
+@import "../mixings";
+
+.dish_section {
+  .row {
+    @include align-center;
+  }
+  .dish_container {
+    @include display-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    .box {
+      -ms-flex-preferred-size: calc(50% - 20px);
+      flex-basis: calc(50% - 20px);
+      margin: 10px;
+      border: 10px solid #f8f8f8;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        border: 10px solid #262626;
+      }
+    }
+  }
+  .detail-box {
+    padding-left: 10%;
+    text-align: right;
+    .heading_container {
+      @include flex-end;
+    }
+    p {
+      margin-top: 20px;
+    }
+    a {
+      @include btn-dark-alt
+    }
+  }
+}

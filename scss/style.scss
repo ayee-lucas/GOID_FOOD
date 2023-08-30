@@ -1,0 +1,225 @@
+@use './sections/slider-section';
+@use "./sections/about-section";
+@use "./sections/app-section";
+@use "./sections/client-section";
+@use "./sections/contact-section";
+@use "./sections/dish-section";
+@use "./sections/footer-section";
+@use "./sections/hot-section";
+@use "./sections/subscribe-section";
+@use "layouts";
+
+
+@import "colors";
+@import "fonts";
+@import "mixings";
+
+
+@font-face {
+  font-family: American Typewriter;
+  src: url(../fonts/AmericanTypewriterBQ-Bold.otf);
+}
+/*header section*/
+/*end header section*/
+/* footer section*/
+p {
+  color: $dark-color;
+}
+body {
+  font-family: $font-family_1;
+  color: $dark-color;
+  background-color: $primary-color;
+}
+
+.heading_container {
+  @include display-flex;
+  @include align-center;
+
+  h2 {
+    font-weight: bold;
+    color: $dark-color;
+    position: relative;
+    text-transform: uppercase;
+  }
+  hr {
+    @include blue-line;
+  }
+}
+.hero_next_section-margin {
+  margin-top: 100px;
+}
+.hero_area {
+  height: 100vh;
+  position: relative;
+  &::before {
+    @include bg-gradient;
+  }
+}
+.sub_page {
+  .hero_area {
+    height: auto;
+    &::before {
+      width: 160px;
+    }
+  }
+}
+.header_section {
+  .container-fluid {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .nav_container {
+    margin: 0 auto;
+  }
+}
+.custom_nav-container.navbar-expand-lg {
+  .navbar-nav {
+    .nav-link {
+      img {
+        width: 22px;
+        margin-right: 15px;
+      }
+      padding: 0px 25px;
+      color: $primary-color;
+      text-align: center;
+      font-family: $font-family_2;
+    }
+  }
+}
+.custom_menu-btn {
+  z-index: 9;
+  position: absolute;
+  right: 5px;
+  top: 14px;
+  button {
+    all: unset;
+    cursor: pointer;
+    margin-top: 12px;
+  }
+  span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: $dark-color;
+    margin: 7px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+.menu_btn-style {
+  button {
+    position: fixed;
+    right: 20px;
+    top: 14px;
+    .s-1 {
+      -webkit-transform: rotate(45deg) translateY(15.5px);
+      transform: rotate(45deg) translateY(15.5px);
+    }
+    .s-2 {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+    }
+    .s-3 {
+      -webkit-transform: rotate(-45deg) translateY(-15.5px);
+      transform: rotate(-45deg) translateY(-15.5px);
+    }
+  }
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $dark-color;
+  background-color: $second-gradient-color;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.9;
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 60px;
+  }
+  a {
+    font-size: 22px;
+    color: $primary-color;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    text-transform: uppercase;
+  }
+}
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.menu_width {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: initial;
+  }
+  &:focus {
+    text-decoration: none;
+    color: initial;
+  }
+}
+.btn {
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  &:focus {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.custom_nav-container {
+  .nav_search-btn {
+    background-image: url(../images/search-icon.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border: none;
+    margin: 0 40px 0 15px;
+    background-position: center;
+  }
+  z-index: 99999;
+  padding: 15px 0;
+  .navbar-toggler {
+    outline: none;
+    .navbar-toggler-icon {
+      background-image: url(../images/menu.png);
+      background-size: 55px;
+    }
+  }
+}
+.navbar-brand {
+  @include display-flex;
+  @include align-center;
+  font-family: $font-family_3;
+  font-weight: 400;
+  img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 22px;
+    color: $primary-color;
+    margin-top: 5px;
+  }
+}
+

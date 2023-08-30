@@ -1,0 +1,35 @@
+@import "../colors";
+@import "../fonts";
+@import "../mixings";
+
+.footer_section {
+  padding: 20px;
+  background-color: $dark-color;
+  .social_container {
+    @include display-flex;
+    @include flex-column;
+    @include align-center;
+    margin: 25px 0;
+    h4 {
+      color: $light-color;
+      font-weight: bold;
+    }
+    .social_box {
+      @include display-flex;
+      a {
+        margin: 0 10px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  p {
+    margin: 0;
+    text-align: center;
+    color: $primary-color;
+  }
+  a {
+    color: $primary-color;
+  }
+}
