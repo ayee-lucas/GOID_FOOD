@@ -1,3 +1,5 @@
+@import './functions';
+
 @mixin display-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,12 +57,9 @@
     from($secondary-color),
     to($second-gradient-color)
   );
-  background: linear-gradient(
-    to right,
-    $secondary-color,
-    $second-gradient-color
-  );
+  background: gradient-background($secondary-color,$second-gradient-color);
 }
+
 
 @mixin blue-line {
   margin: 0 10px;
@@ -81,29 +80,32 @@
   margin-top: 45px;
 }
 
-@mixin btn-dark {
+.btn-layout {
   display: inline-block;
   padding: 10px 0px;
-  background-color: $dark-color;
-  color: $primary-color;
-  border: 1px solid #262626;
   text-transform: uppercase;
   &:hover {
     background-color: transparent;
+  }
+}
+
+@mixin btn-dark {
+  @extend .btn-layout;
+  background-color: $dark-color;
+  color: $primary-color;
+  border: 1px solid #262626;
+  &:hover {
     color: $dark-color;
   }
 }
 
 @mixin btn-blue {
-  display: inline-block;
-  padding: 10px 0px;
+  @extend .btn-layout;
   background-color: $secondary-color;
   color: $primary-color;
   border: 1px solid #51b5ef;
-  text-transform: uppercase;
   margin-right: 10px;
   &:hover {
-    background-color: transparent;
     color: $secondary-color;
   }
 }

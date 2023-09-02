@@ -9,7 +9,6 @@
 @use "./sections/subscribe-section";
 @use "layouts";
 
-
 @import "colors";
 @import "fonts";
 @import "mixings";
@@ -132,7 +131,6 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: $dark-color;
   background-color: $second-gradient-color;
   overflow-x: hidden;
   -webkit-transition: 0.5s;

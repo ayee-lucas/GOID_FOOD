@@ -1,0 +1,12 @@
+
+@function gradient-background($color1, $color2) {
+    $value: linear-gradient(to right, $color1, $color2);
+
+    @return $value;
+};
+
+
+@function border($thickness, $color) {
+    @return #{$thickness} solid $color;
+};
+  

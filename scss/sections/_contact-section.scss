@@ -1,6 +1,7 @@
 @import "../colors";
 @import "../fonts";
 @import "../mixings";
+@import "../functions";
 
 .contact_section {
   h2 {
@@ -15,7 +16,7 @@
       height: 30px;
       margin-top: 10px;
       border: none;
-      border-bottom: 1px solid #363535;
+      border-bottom: border(1px, $dark-color);
       outline: none;
       &::-webkit-input-placeholder {
         color: $dark-color;

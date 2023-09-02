@@ -19,7 +19,7 @@
         width: 100%;
       }
       &:hover {
-        border: 10px solid #262626;
+        border: border(10px, $dark-color);
       }
     }
   }
